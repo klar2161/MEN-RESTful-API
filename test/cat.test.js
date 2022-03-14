@@ -1,6 +1,4 @@
-process.env.NODE_ENV = 'test';
 
-const Cat = require('../models/cat');
 const chai = require('chai');
 const expect = chai.expect;
 const should = chai.should();
@@ -9,15 +7,6 @@ const server = require('../server');
 
 chai.use(chaiHttp);
 
-before((done) => {
-    Cat.deleteMany({}, function(err) {});
-    done();
-});
-
-after((done) => {
-    Cat.deleteMany({}, function(err) {});
-    done();
-});
 
 
 
